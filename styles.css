@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #302e2b;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+input[type="checkbox"] {
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    accent-color: #4CAF50;
+}
+
+.whiteLabel {
+    color: #ffffff;
+}
+
+.greenLabel {
+    color: #4CAF50;
+}
+
+.checkBoxLabel {
+    cursor: pointer;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 400px;
+}
+
+#helpObject {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.settings {
+    user-select: none;
+    margin: 10px;
+    height: 350px;
+    background: #262522;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+}
+
+.menu {
+    margin: 10px;
+    height: 120px;
+    background: #262522;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    /* padding-top: 20px; */
+}
+
+.menu ul {
+    list-style: none;
+    margin-top: 15px;
+    /* text-align: start; */
+}
+
+.menu ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* #set {
+    order: 1;
+    flex: 2;
+} */
+
+#moves {
+    /* order: 3; */
+    width: 400px;
+}
+
+#board {
+    flex-wrap: wrap;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 517px;
+    /* order: 2; */
+    /* flex: 1; */
+}
+
+#field {
+    float: left;
+    width: 480px;
+    height: 480px;
+    border: 1px solid #000;
+}
+
+#numbers {
+    user-select: none;
+    height: 458px;
+    float: left;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: 37px;
+    padding-top: 22px;
+    color: #ebfcd0;
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+#letters {
+    text-align: center;
+    width: 100%;
+    user-select: none;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    letter-spacing: 51px;
+    padding-left: 15px;
+    color: #739552;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+#winner {
+    opacity: 0%;
+    visibility: hidden;
+    text-align: center;
+    /* border-radius: 10%; */
+    background: #262522;
+    color: #ffffff;
+    width: 350px;
+    height: 200px;
+    margin-top: 140px;
+    position: absolute;
+    box-shadow: 0px 0px 20px black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    transition: all 0.5s ease;
+}
+
+#winner p {
+    margin-top: 55px;
+    margin-bottom: 20px;
+    line-height: 18px;
+    user-select: none;
+}
+
+#moves #mainTxt {
+    margin-bottom: 10px;
+}
+
+#movesBlock {
+    overflow-y: scroll;
+    max-height: 400px;
+    height: auto;
+    width: 90%;
+    margin-top: 0px;
+    text-align: left;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px 10px;
+    box-shadow: inset 0px 0px 5px black;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    /* border-radius: 20px; */
+    line-height: 18px;
+}
+
+#movesBlock::-webkit-scrollbar {
+    width: 0px;
+}
+
+.smallBlock {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 50px;
+    height: 50px;
+    background: green;
+    border-radius: 5px;
+}
+
+.smallBlock:not(:last-child) {
+    margin-right: 10px;
+}
+
+.smallBlock:hover {
+    cursor: grab;
+}
+
+.textOnRight {
+    text-align: left;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+#mainTxt {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+img {
+    width: 60px;
+}
+
+p:hover {
+    cursor: default;
+}
+
+.chessBlock {
+    display: block;
+    width: 60px;
+    height: 60px;
+    float: left;
+    background: #ebfcd0;
+}
+
+.backBlack {
+    background: #739552;
+}
+
+.knight.white {
+    background-image: url('assets/pieces/white/knight.png');
+    background-size: 100%;
+}
+
+.knight.black {
+    background-image: url('assets/pieces/black/knight.png');
+    background-size: 100%;
+}
+
+.rook.white {
+    background-image: url('assets/pieces/white/rook.png');
+    background-size: 100%;
+}
+
+.rook.black {
+    background-image: url('assets/pieces/black/rook.png');
+    background-size: 100%;
+}
+
+.bishop.white {
+    background-image: url('assets/pieces/white/bishop.png');
+    background-size: 100%;
+}
+
+.bishop.black {
+    background-image: url('assets/pieces/black/bishop.png');
+    background-size: 100%;
+}
+
+.queen.white {
+    background-image: url('assets/pieces/white/queen.png');
+    background-size: 100%;
+}
+
+.queen.black {
+    background-image: url('assets/pieces/black/queen.png');
+    background-size: 100%;
+}
+
+.pawn.white {
+    background-image: url('assets/pieces/white/pawn.png');
+    background-size: 100%;
+}
+
+.pawn.black {
+    background-image: url('assets/pieces/black/pawn.png');
+    background-size: 100%;
+}
+
+.king.white {
+    background-image: url('assets/pieces/white/king.png');
+    background-size: 100%;
+}
+
+.king.black {
+    background-image: url('assets/pieces/black/king.png');
+    background-size: 100%;
+}
+
+.selected {
+    /* box-shadow: inset 0px 0px 25px rgba(0, 0, 0, 0.5); */
+    background: #B9CA43;
+}
+
+.element {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.checked {
+    background: #c20000;
+}
+
+.chessBlock.blue {
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.chessBlock.blue::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pink {
+    box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.pink::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
